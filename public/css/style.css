@@ -1,0 +1,326 @@
+:root {
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --grisOscuro: #666;
+    --grisClaro: #ebebeb;
+    --verde: #39b54a;
+    /* Tamaños fuentes */
+    --texto: 12px;
+    --titulares: 24px;
+    --precios: 18px;
+    --descuentos: 16px;
+    --descripciones: 16px;
+    --tipografia: 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--tipografia);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--amarillo);
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+header div.logo {
+    width: 50%;
+    padding: 5px;
+}
+
+header div.logo img {
+    width: 100%
+}
+
+header div.barra {
+    display: flex;
+    width: 50%;
+    height: fit-content;
+    align-self: center;
+}
+
+header div.barra input {
+    width: 100%;
+    border-radius: 2px;
+    border-style: none;
+    text-align: center;
+}
+
+header div.barra button {
+    height: fit-content;
+    border-radius: 2px;
+    border-style: none;
+    padding: 1px;
+}
+
+header div.barra button i {
+    color: var(--grisOscuro);
+}
+
+header div.caja {
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    margin: 20px auto;
+}
+
+header div p.texto {
+    height: fit-content;
+    font-size: var(--texto);
+}
+
+header div.burguer-menu {
+    display: flex;
+    align-self: flex-end;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+header div.burguer-menu i {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--celeste);
+    color: white;
+}
+
+
+header nav ul{
+    display: none;
+}
+
+/* FIN HEADER */
+
+/* MAIN */
+
+main {
+    background-color: var(--grisClaro);
+}
+
+main div.banner {
+    width: 100%;
+}
+
+main div.banner img {
+    width: 100%
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 5px;
+    justify-content: center;
+}
+
+main div h3 {
+    display: block;
+    margin: 10px 0px 2px;
+    padding: 10px;
+    text-align: justify;
+    font-size: var(--titulares);
+}
+
+main section article {
+    background-color: white;
+    width: fit-content;
+}
+
+main section article div {
+    width: 100%;
+    position: relative;
+}
+
+main section article div img{
+    width: 300px;
+}
+
+main section article div.info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section article div p.precio {
+    margin: 0px 10px;
+    font-size: var(--precios);
+}
+
+main section article div p.descuento {
+    color: var(--verde);
+    font-size: var(--descuentos);
+}
+
+main section article strong {
+    margin: 0px 10px;
+    color: var(--grisOscuro);
+    font-size: var(--descripciones);
+}
+
+main section article div.truck{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: var(--verde);
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+}
+
+
+/* FIN MAIN */
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+footer article p{
+    font-size: var(--texto);
+    padding: 10px;
+}
+
+footer article i {
+    color: var(--celeste);
+}
+
+footer p.copyright {
+    font-size: var(--texto);
+}
+
+/* FIN FOOTER */
+
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        justify-content: space-around;
+    }
+
+    header div:nth-child(-n + 3) {
+        flex-wrap: wrap;
+    }
+
+    header div.logo {
+        width: 35%;
+    }
+
+    header div.barra {
+        display: flex;
+        width: 25%;
+    }
+
+    header div.barra input {
+        width: fit-content;
+        border-radius: 2px;
+        border-style: none;
+        text-align: center;
+    }
+
+    header div.caja {
+        display: flex;
+        width: 25%;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    header div p.texto {
+        font-size: var(--texto);
+    }
+    
+    header div.burguer-menu {
+        display: none
+    }
+
+    header nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 40px 0px 10px;
+    }
+    header nav ul {
+        display:flex;
+    }
+
+    header nav ul li {
+        margin: 0px 8px;
+    }
+
+    header nav ul.logos li a {
+        margin-right: 4px;
+    }
+
+    /* FIN HEADER */
+
+    /* MAIN */
+
+    main section {
+        gap: 30px;
+    }
+
+    /* FIN MAIN */
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer article {
+        justify-content: space-between;
+        margin: 10px;
+    }
+       
+    footer article p{
+        width: 200px;
+    }
+    
+    footer p.copyright {
+        align-self: flex-end;
+        justify-content: flex-start;
+    }
+
+    /* FIN FOOTER */
+}
+
+/* FIN TABLET */
