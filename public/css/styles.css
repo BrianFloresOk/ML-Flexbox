@@ -1,0 +1,376 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+    --font-Roboto: 'Roboto', sans-serif;
+    --texto: 12px;
+    --titular: 24px;
+    --precio: 18px;
+    --descuento: 16px;
+    --descripcion: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-Roboto);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/*-------- HEADER ----------*/
+
+header {
+    background-color: var(--Amarillo);
+}
+
+header .encabezado {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    width: 50%;
+    height: 50%;
+    padding: 20px 0px 10px 10px;
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+header .search__bar {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+header .search__bar input.busqueda {
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    padding-left: 10px;
+}
+
+header .search__bar input.busqueda::placeholder {
+    color: var(--Gris-oscuro);
+    font-size: var(--texto);
+}
+
+header .search__bar .button__content {
+    height: 30px;
+    position: absolute;
+    right: 35%;
+    width: fit-content;
+}
+
+header .search__bar button {
+    height: 100%;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .search__bar button i {
+    color: var(--Gris-oscuro);
+}
+
+header .compra__protegida {
+    text-align: center;
+    margin: 10px 0px;
+    padding: 10px 0px
+}
+
+header .compra__protegida p {
+    font-size: var(--texto);
+}
+
+header nav {
+    display: none;
+}
+
+header .nav__bar,
+header .login__bar {
+    margin: 20px 0px 0px;
+}
+
+header .nav__bar a,
+header .login__bar a {
+    font-size: var(--texto);
+}
+
+header .burger-menu {
+    text-align: center;
+}
+
+header .burger-menu i {
+    padding: 10px;
+    background-color: var(--Celeste);
+    color: white;
+    border-radius: 5px;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+/*------- FIN HEADER ----------*/
+
+/* ------ INICIO MAIN ---------*/
+
+.banner {
+    background-color: var(--Gris-claro);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+main {
+    background-color: var(--Gris-claro);
+    padding: 0 16px 10px;
+}
+
+main .titulo {
+    padding: 20px 0px;
+}
+
+main .titulo h2 {
+    font-size: var(--titular);
+    color: var(--Gris-oscuro);
+}
+
+main section article {
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+main section article .image__container {
+    background-color: white;
+}
+
+main section article img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+main article .description__card {
+    background-color: white;
+    border-top: thin solid #ebebeb;
+    padding: 15px;
+    position: relative;
+}
+
+main article i {
+    color: var(--Verde);
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main article .cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+main article .precio {
+    font-size: var(--precio);
+    width: 30%;
+}
+
+main article .descuento {
+    font-size: var(--descuento);
+    color: var(--Verde);
+    width: 70%;
+    text-align: center;
+}
+
+main article b {
+    color: var(--Gris-oscuro);
+    font-size: var(--descripcion);
+    display: none;
+}
+
+
+/* ------- FOOTER ----------- */
+footer {
+    background-color: white;
+}
+
+footer .icon {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .icon i {
+    color: var(--Celeste);
+    font-size: 24px;
+}
+
+footer .information {
+    padding: 25px 35px;
+    text-align: center;
+}
+
+footer .information p {
+    font-size: var(--texto);
+}
+
+footer #copyright {
+    font-size: var(--texto);
+    padding: 10px 20px;
+}
+/* -------- Fin FOOTER ----------- */
+
+/********** Medias Queries**********/
+
+/*------------- TABLET -----------------*/
+@media (min-width: 361px) {
+    header {
+        padding: 6px;
+    }
+
+    header .logo {
+        width: 20%;
+        height: auto;
+        padding: 0px;
+    }
+
+    header .search__bar {
+        width: 50%;
+        position: static;
+    }
+
+    header .search__bar input.busqueda {
+        width: 100%;
+    }
+
+    header .search__bar .button__content {
+        position: static;
+        right: initial;
+    }
+
+    header .compra__protegida {
+        width: 30%;
+        font-size: 10px;
+    }
+
+    header nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header .nav__bar,
+    header .login__bar {
+        display: flex;
+        width: 40%;
+        justify-content: space-evenly;
+    }
+
+    header .nav__bar li a,
+    header .login__bar li a{
+        font-size: 9px;
+    }
+
+    header .burger-menu {
+        display: none;
+    }
+
+    main section {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+    }
+
+    main article b {
+        display: block;
+        color: var(--Gris-oscuro);
+        font-size: var(--descripcion);
+    }
+}
+
+/*------------ Fin TABLET -------------*/
+
+/*------------- DESKTOP ------------*/
+@media (min-width: 769px) {
+    header .search__bar {
+        justify-content: center;
+    }
+
+    header .search__bar input.busqueda {
+        width: 80%;
+    }
+
+    header .compra__protegida {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .nav__bar li,
+    header .login__bar li{
+        padding: 10px;
+    }
+
+    header .nav__bar li a,
+    header .login__bar li a{
+        font-size: var(--texto);
+    }
+
+    main article {
+        width: 22%;
+    }
+}
